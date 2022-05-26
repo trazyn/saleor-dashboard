@@ -21,7 +21,7 @@ export type AppInstallUrlQueryParams = Partial<{ [MANIFEST_ATTR]: string }>;
 
 export enum AppListUrlSortField {
   name = "name",
-  active = "active"
+  active = "active",
 }
 
 export type CustomAppUrlDialog =
@@ -58,20 +58,20 @@ export const appUrl = (id: string, params?: AppDetailsUrlQueryParams) =>
 export const appDeepUrl = (
   id: string,
   subPath: string,
-  params?: AppDetailsUrlQueryParams
+  params?: AppDetailsUrlQueryParams,
 ) => appDeepPath(encodeURIComponent(id), subPath) + "?" + stringifyQs(params);
 
 export const getAppCompleteUrlFromDashboardUrl = (
   dashboardUrl: string,
   appUrl?: string,
-  appId?: string
+  appId?: string,
 ) => {
   if (!appUrl || !appId) {
     return appUrl;
   }
   const deepSubPath = dashboardUrl.replace(
     appPath(encodeURIComponent(appId)),
-    ""
+    "",
   );
   const appCompleteUrl = urlJoin(appUrl, deepSubPath);
   return appCompleteUrl;
@@ -79,7 +79,7 @@ export const getAppCompleteUrlFromDashboardUrl = (
 export const getDashboardUrFromAppCompleteUrl = (
   appCompleteUrl: string,
   appUrl?: string,
-  appId?: string
+  appId?: string,
 ) => {
   if (!appUrl || !appId) {
     return appUrl;

@@ -4,7 +4,7 @@ import {
   TableCell,
   TableFooter,
   TableRow,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import { appDetailsUrl, appUrl } from "@saleor/apps/urls";
 import { Button } from "@saleor/components/Button";
@@ -48,7 +48,7 @@ const InstalledApps: React.FC<InstalledAppsProps> = ({
         title={intl.formatMessage({
           id: "ZeD2TK",
           defaultMessage: "Third-party Apps",
-          description: "section header"
+          description: "section header",
         })}
       />
       <ResponsiveTable>
@@ -125,7 +125,7 @@ const InstalledApps: React.FC<InstalledAppsProps> = ({
                   </Typography>
                 </TableCell>
               </TableRow>
-            )
+            ),
           )}
         </TableBody>
       </ResponsiveTable>

@@ -5,7 +5,7 @@ import {
   TableCell,
   TableRow,
   Tooltip,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import ErrorIcon from "@material-ui/icons/Error";
 import { Button } from "@saleor/components/Button";
@@ -44,7 +44,7 @@ const AppsInProgress: React.FC<AppsInProgressProps> = ({
         title={intl.formatMessage({
           id: "nIrjSR",
           defaultMessage: "Ongoing Installations",
-          description: "section header"
+          description: "section header",
         })}
       />
       <ResponsiveTable>
@@ -58,7 +58,7 @@ const AppsInProgress: React.FC<AppsInProgressProps> = ({
                 <TableCell
                   className={classNames(
                     classes.colAction,
-                    classes.colInstallAction
+                    classes.colInstallAction,
                   )}
                 >
                   <Typography variant="body2" className={classes.text}>
@@ -77,7 +77,7 @@ const AppsInProgress: React.FC<AppsInProgressProps> = ({
                 <TableCell
                   className={classNames(
                     classes.colAction,
-                    classes.colInstallAction
+                    classes.colInstallAction,
                   )}
                 >
                   <Typography variant="body2" className={classes.error}>
@@ -89,7 +89,7 @@ const AppsInProgress: React.FC<AppsInProgressProps> = ({
                     <Tooltip
                       title={<Typography variant="body2">{message}</Typography>}
                       classes={{
-                        tooltip: classes.customTooltip
+                        tooltip: classes.customTooltip,
                       }}
                     >
                       <ErrorIcon />
