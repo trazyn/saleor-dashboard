@@ -148,6 +148,7 @@ export function createUpdateHandler(
         const productVariantResult = await productVariantCreate({
           variables: {
             input: {
+              name: data.name,
               attributes:
                 product.productType.variantAttributes?.map(attribute => ({
                   id: attribute.id,

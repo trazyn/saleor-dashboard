@@ -117,6 +117,7 @@ export const ProductVariant: React.FC<ProductVariantCreateProps> = ({
     const result = await variantCreate({
       variables: {
         input: {
+          name: formData.name,
           attributes: prepareAttributesInput({
             attributes: formData.attributes.filter(
               attribute => attribute.value?.length && attribute.value[0] !== ""

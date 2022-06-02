@@ -38,6 +38,7 @@ import ProductVariantCheckoutSettings from "../ProductVariantCheckoutSettings/Pr
 import ProductVariantEndPreorderDialog from "../ProductVariantEndPreorderDialog";
 import ProductVariantMediaSelectDialog from "../ProductVariantImageSelectDialog";
 import ProductVariantMedia from "../ProductVariantMedia";
+import ProductVariantName from "../ProductVariantName/ProductVariantName";
 import ProductVariantNavigation from "../ProductVariantNavigation";
 import ProductVariantPrice from "../ProductVariantPrice";
 import ProductVariantSetDefault from "../ProductVariantSetDefault";
@@ -254,6 +255,13 @@ const ProductVariantPage: React.FC<ProductVariantPageProps> = ({
                     />
                   </div>
                   <div>
+                    <ProductVariantName
+                      data={data}
+                      disabled={loading}
+                      errors={errors}
+                      onChange={change}
+                    />
+                    <CardSpacer />
                     <VariantDetailsChannelsAvailabilityCard variant={variant} />
                     {nonSelectionAttributes.length > 0 && (
                       <>

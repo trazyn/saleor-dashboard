@@ -1305,6 +1305,10 @@
     "context": "button",
     "string": "Back to homepage"
   },
+  "95R5zB": {
+    "context": "title",
+    "string": "Variant name"
+  },
   "95oJ5d": {
     "context": "button",
     "string": "Go back to dashboard"
@@ -5929,6 +5933,10 @@
   "jj3Cb8": {
     "context": "informations about product prices etc, header",
     "string": "Financial Information"
+  },
+  "jjeSpP": {
+    "context": "description",
+    "string": "Label of the variant name on the product page"
   },
   "jmh0rV": {
     "context": "no gift card products alert message",

@@ -117,6 +117,7 @@ function createVariant(
   );
 
   return {
+    name: data.name,
     attributes: attributes.map(getAttributeFromAttributeValueInput),
     channelListings: price,
     sku: "",

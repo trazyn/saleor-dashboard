@@ -35,6 +35,7 @@ export const getSimpleProductVariables = (
   },
   productVariantId: productId,
   productVariantInput: {
+    name: data.name,
     sku: data.sku,
     trackInventory: data.trackInventory,
     preorder: data.isPreorder

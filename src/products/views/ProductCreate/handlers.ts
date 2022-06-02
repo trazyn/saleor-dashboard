@@ -44,6 +44,7 @@ const getSimpleProductVariables = (
   productId: string
 ) => ({
   input: {
+    name: formData.name,
     attributes: [],
     product: productId,
     sku: formData.sku,

@@ -11328,7 +11328,7 @@ export type VariantDeleteMutationHookResult = ReturnType<typeof useVariantDelete
 export type VariantDeleteMutationResult = Apollo.MutationResult<Types.VariantDeleteMutation>;
 export type VariantDeleteMutationOptions = Apollo.BaseMutationOptions<Types.VariantDeleteMutation, Types.VariantDeleteMutationVariables>;
 export const VariantUpdateDocument = gql`
-    mutation VariantUpdate($addStocks: [StockInput!]!, $removeStocks: [ID!]!, $id: ID!, $attributes: [AttributeValueInput!], $sku: String, $quantityLimitPerCustomer: Int, $trackInventory: Boolean!, $stocks: [StockInput!]!, $preorder: PreorderSettingsInput, $weight: WeightScalar, $firstValues: Int, $afterValues: String, $lastValues: Int, $beforeValues: String) {
+    mutation VariantUpdate($addStocks: [StockInput!]!, $removeStocks: [ID!]!, $id: ID!, $name: String!, $attributes: [AttributeValueInput!], $sku: String, $quantityLimitPerCustomer: Int, $trackInventory: Boolean!, $stocks: [StockInput!]!, $preorder: PreorderSettingsInput, $weight: WeightScalar, $firstValues: Int, $afterValues: String, $lastValues: Int, $beforeValues: String) {
   productVariantStocksDelete(warehouseIds: $removeStocks, variantId: $id) {
     errors {
       ...ProductVariantStocksDeleteError
@@ -11361,7 +11361,7 @@ export const VariantUpdateDocument = gql`
   }
   productVariantUpdate(
     id: $id
-    input: {attributes: $attributes, sku: $sku, trackInventory: $trackInventory, preorder: $preorder, weight: $weight, quantityLimitPerCustomer: $quantityLimitPerCustomer}
+    input: {name: $name, attributes: $attributes, sku: $sku, trackInventory: $trackInventory, preorder: $preorder, weight: $weight, quantityLimitPerCustomer: $quantityLimitPerCustomer}
   ) {
     errors {
       ...ProductErrorWithAttributes
@@ -11394,6 +11394,7 @@ export type VariantUpdateMutationFn = Apollo.MutationFunction<Types.VariantUpdat
  *      addStocks: // value for 'addStocks'
  *      removeStocks: // value for 'removeStocks'
  *      id: // value for 'id'
+ *      name: // value for 'name'
  *      attributes: // value for 'attributes'
  *      sku: // value for 'sku'
  *      quantityLimitPerCustomer: // value for 'quantityLimitPerCustomer'

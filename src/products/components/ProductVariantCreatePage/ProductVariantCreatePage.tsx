@@ -32,6 +32,7 @@ import { defineMessages, useIntl } from "react-intl";
 import ProductShipping from "../ProductShipping/ProductShipping";
 import ProductStocks from "../ProductStocks";
 import ProductVariantCheckoutSettings from "../ProductVariantCheckoutSettings/ProductVariantCheckoutSettings";
+import ProductVariantName from "../ProductVariantName/ProductVariantName";
 import ProductVariantNavigation from "../ProductVariantNavigation";
 import ProductVariantPrice from "../ProductVariantPrice";
 import ProductVariantCreateForm, {
@@ -178,9 +179,17 @@ const ProductVariantCreatePage: React.FC<ProductVariantCreatePageProps> = ({
                 variants={product?.variants}
                 productId={productId}
                 onReorder={onVariantReorder}
+                isCreate={true}
               />
             </div>
             <div>
+              <ProductVariantName
+                data={data}
+                disabled={disabled}
+                errors={errors}
+                onChange={change}
+              />
+              <CardSpacer />
               <Attributes
                 title={intl.formatMessage(messages.attributesHeader)}
                 attributes={data.attributes.filter(

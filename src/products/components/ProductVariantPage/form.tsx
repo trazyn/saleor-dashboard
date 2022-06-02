@@ -63,6 +63,7 @@ import { useIntl } from "react-intl";
 import { ProductStockInput } from "../ProductStocks";
 
 export interface ProductVariantUpdateFormData extends MetadataFormData {
+  name: string;
   sku: string;
   trackInventory: boolean;
   weight: string;
@@ -167,6 +168,7 @@ function useProductVariantUpdateForm(
   const channelsInput = getChannelsInput(currentChannelsWithPreorderInfo);
 
   const initial: ProductVariantUpdateFormData = {
+    name: variant?.name || "",
     metadata: variant?.metadata?.map(mapMetadataItemToInput),
     privateMetadata: variant?.privateMetadata?.map(mapMetadataItemToInput),
     sku: variant?.sku || "",

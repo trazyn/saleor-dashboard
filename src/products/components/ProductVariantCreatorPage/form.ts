@@ -34,6 +34,7 @@ export interface Attribute {
   values: Array<AttributeValue<Partial<AttributeValueFragment>>>;
 }
 export interface ProductVariantCreateFormData {
+  name: string;
   attributes: Attribute[];
   price: Price;
   stock: Stock;
@@ -52,6 +53,7 @@ export const createInitialForm = (
       price: channel.price?.toString() || ""
     })) || [];
   return {
+    name: "",
     attributes: attributes.map(attribute => ({
       id: attribute.id,
       valueRequired: attribute.valueRequired,

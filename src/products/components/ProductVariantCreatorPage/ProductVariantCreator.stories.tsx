@@ -79,10 +79,12 @@ const errors: BulkProductErrorFragment[] = [
 ];
 
 const data: ProductVariantCreateFormData = {
+  name: "Test product",
   attributes: dataAttributes,
   price,
   stock,
   variants: createVariants({
+    name: "Product Variant",
     attributes: dataAttributes,
     price,
     stock,

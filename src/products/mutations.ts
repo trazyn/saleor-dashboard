@@ -198,6 +198,7 @@ export const variantUpdateMutation = gql`
     $addStocks: [StockInput!]!
     $removeStocks: [ID!]!
     $id: ID!
+    $name: String!
     $attributes: [AttributeValueInput!]
     $sku: String
     $quantityLimitPerCustomer: Int
@@ -243,6 +244,7 @@ export const variantUpdateMutation = gql`
     productVariantUpdate(
       id: $id
       input: {
+        name: $name
         attributes: $attributes
         sku: $sku
         trackInventory: $trackInventory

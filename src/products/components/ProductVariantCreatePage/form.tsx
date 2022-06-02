@@ -45,6 +45,7 @@ import { useIntl } from "react-intl";
 import { ProductStockFormsetData, ProductStockInput } from "../ProductStocks";
 
 export interface ProductVariantCreateFormData extends MetadataFormData {
+  name: string;
   sku: string;
   trackInventory: boolean;
   weight: string;
@@ -109,6 +110,7 @@ const initial: ProductVariantCreateFormData = {
   metadata: [],
   privateMetadata: [],
   sku: "",
+  name: "",
   trackInventory: true,
   weight: "",
   isPreorder: false,

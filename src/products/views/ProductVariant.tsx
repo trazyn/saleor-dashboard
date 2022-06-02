@@ -265,6 +265,7 @@ export const ProductVariant: React.FC<ProductUpdateProps> = ({
 
     const result = await updateVariant({
       variables: {
+        name: data.name,
         addStocks: data.addStocks.map(mapFormsetStockToStockInput),
         attributes: prepareAttributesInput({
           attributes: data.attributes,
